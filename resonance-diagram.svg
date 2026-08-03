@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <!-- 时空共振算法示意图 · 中心亮星（事件）+ 涟漪圈（时间窗口）+ 连线（语义/因果） -->
+  <defs>
+    <radialGradient id="star-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E9D492" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#E9D492" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#E9D492" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="holo-glow">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" fill="#0E0C09"/>
+  <!-- 背景星点 -->
+  <g fill="#E9D492">
+    <circle cx="80" cy="120" r="1" opacity="0.5"/><circle cx="200" cy="640" r="1.2" opacity="0.4"/>
+    <circle cx="1090" cy="180" r="1" opacity="0.5"/><circle cx="960" cy="690" r="1.3" opacity="0.35"/>
+    <circle cx="420" cy="90" r="0.9" opacity="0.45"/><circle cx="760" cy="120" r="1" opacity="0.4"/>
+    <circle cx="140" cy="430" r="0.8" opacity="0.4"/><circle cx="1140" cy="470" r="1" opacity="0.4"/>
+    <circle cx="530" cy="730" r="1" opacity="0.35"/><circle cx="880" cy="60" r="0.8" opacity="0.45"/>
+  </g>
+  <!-- 时间窗口涟漪圈 -->
+  <g fill="none" stroke="#3E7C6A" filter="url(#holo-glow)">
+    <circle cx="600" cy="400" r="90" stroke-width="1" opacity="0.9"/>
+    <circle cx="600" cy="400" r="160" stroke-width="0.9" opacity="0.6"/>
+    <circle cx="600" cy="400" r="240" stroke-width="0.8" opacity="0.4" stroke-dasharray="6 5"/>
+    <circle cx="600" cy="400" r="330" stroke-width="0.7" opacity="0.25" stroke-dasharray="3 6"/>
+  </g>
+  <!-- 共振连线：语义/因果 -->
+  <g stroke="#3E7C6A" stroke-width="1" opacity="0.75" fill="none">
+    <path d="M600 400 L 330 220" />
+    <path d="M600 400 L 880 250" />
+    <path d="M600 400 L 900 540" />
+    <path d="M600 400 L 350 580" />
+    <path d="M600 400 L 640 130" stroke-dasharray="4 4"/>
+    <path d="M330 220 L 640 130" stroke-width="0.6" opacity="0.5" stroke-dasharray="2 4"/>
+    <path d="M880 250 L 900 540" stroke-width="0.6" opacity="0.5" stroke-dasharray="2 4"/>
+  </g>
+  <!-- 卫星事件星 -->
+  <g filter="url(#holo-glow)">
+    <circle cx="330" cy="220" r="5" fill="#E9D492" opacity="0.9"/>
+    <circle cx="880" cy="250" r="4.2" fill="#E9D492" opacity="0.85"/>
+    <circle cx="900" cy="540" r="3.6" fill="#E9D492" opacity="0.8"/>
+    <circle cx="350" cy="580" r="4.6" fill="#E9D492" opacity="0.85"/>
+    <circle cx="640" cy="130" r="3" fill="#A67C3D"/>
+  </g>
+  <!-- 标签 -->
+  <g font-family="'Noto Sans SC',sans-serif" font-size="15" fill="#EFE6D0" opacity="0.75" letter-spacing="2">
+    <text x="330" y="196" text-anchor="middle">共时窗口 ±10 年</text>
+    <text x="880" y="226" text-anchor="middle">语义相似</text>
+    <text x="900" y="574" text-anchor="middle">地理衰减</text>
+    <text x="350" y="614" text-anchor="middle">因果边权重</text>
+  </g>
+  <!-- 中心主星 -->
+  <circle cx="600" cy="400" r="120" fill="url(#star-glow)"/>
+  <g filter="url(#holo-glow)">
+    <circle cx="600" cy="400" r="9" fill="#FFF3D6"/>
+    <path d="M600 376 L600 424 M576 400 L624 400" stroke="#E9D492" stroke-width="1.2" opacity="0.9"/>
+    <path d="M586 386 L614 414 M614 386 L586 414" stroke="#E9D492" stroke-width="0.8" opacity="0.6"/>
+  </g>
+  <text x="600" y="446" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="18" fill="#E9D492" letter-spacing="4">事 件</text>
+</svg>

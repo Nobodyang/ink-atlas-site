@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- 经纬线织物暗纹 · 线宽 0.5px · 青铜金 6% 透明度 · 平铺 -->
+  <defs>
+    <pattern id="weave" width="64" height="64" patternUnits="userSpaceOnUse">
+      <g stroke="#A67C3D" stroke-width="0.5" opacity="0.06">
+        <path d="M0 8 H64 M0 24 H64 M0 40 H64 M0 56 H64"/>
+        <path d="M8 0 V64 M24 0 V64 M40 0 V64 M56 0 V64"/>
+      </g>
+      <g stroke="#A67C3D" stroke-width="0.5" opacity="0.04">
+        <path d="M0 16 H64 M0 48 H64 M16 0 V64 M48 0 V64"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="64" height="64" fill="url(#weave)"/>
+</svg>

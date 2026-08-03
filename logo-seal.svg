@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- 墨染山河 · 方形朱文印章 · 朱砂 #B03A2E · 斑驳边缘 · 透明底 -->
+  <defs>
+    <filter id="seal-rough" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="4" seed="7" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="14" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="seal-mottle" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="3" seed="13" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.9 0.9 0.9 0 -0.55" result="holes"/>
+      <feComposite in="SourceGraphic" in2="holes" operator="out"/>
+    </filter>
+    <style>
+      .glyph { font-family: 'Ma Shan Zheng', 'Noto Serif SC', serif; font-size: 150px; fill: #B03A2E; }
+    </style>
+  </defs>
+  <g filter="url(#seal-rough)">
+    <g filter="url(#seal-mottle)" opacity="0.92">
+      <!-- 印面边框：双刀边 -->
+      <rect x="34" y="34" width="444" height="444" rx="14" fill="none" stroke="#B03A2E" stroke-width="22"/>
+      <rect x="72" y="72" width="368" height="368" rx="6" fill="none" stroke="#B03A2E" stroke-width="6" opacity="0.85"/>
+      <!-- 四字朱文 2x2：墨 染 / 山 河 -->
+      <text class="glyph" x="150" y="212" text-anchor="middle">墨</text>
+      <text class="glyph" x="362" y="212" text-anchor="middle">染</text>
+      <text class="glyph" x="150" y="418" text-anchor="middle">山</text>
+      <text class="glyph" x="362" y="418" text-anchor="middle">河</text>
+    </g>
+  </g>
+</svg>

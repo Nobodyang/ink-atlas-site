@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <!-- 历史疆域地图底图 · 墨夜底 · 夜幕蓝海洋 · 青铜金海岸线与河流线稿 · 古地图绘风 -->
+  <defs>
+    <radialGradient id="land-glow" cx="50%" cy="42%" r="70%">
+      <stop offset="0%" stop-color="#1B2A4A" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0E0C09" stop-opacity="1"/>
+    </radialGradient>
+    <filter id="map-holo">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" fill="#0E0C09"/>
+  <rect width="1200" height="800" fill="url(#land-glow)" opacity="0.55"/>
+  <!-- 大陆块：夜幕蓝 -->
+  <g fill="#1B2A4A" opacity="0.8">
+    <path d="M120 200 C 200 150, 340 130, 460 160 C 560 185, 640 150, 740 170 C 860 195, 960 180, 1040 230 C 1090 265, 1080 330, 1030 370 C 960 425, 900 420, 840 470 C 790 512, 760 580, 690 600 C 600 626, 520 600, 470 640 C 430 672, 380 690, 320 660 C 250 626, 220 560, 180 510 C 130 448, 90 400, 100 320 C 106 268, 90 225, 120 200 Z"/>
+    <path d="M880 560 C 930 545, 990 560, 1020 600 C 1045 635, 1030 680, 990 695 C 940 712, 890 690, 870 650 C 855 618, 855 570, 880 560 Z" opacity="0.6"/>
+  </g>
+  <!-- 海岸线：青铜金线稿 -->
+  <g fill="none" stroke="#A67C3D" stroke-width="1.2" filter="url(#map-holo)" opacity="0.85">
+    <path d="M120 200 C 200 150, 340 130, 460 160 C 560 185, 640 150, 740 170 C 860 195, 960 180, 1040 230 C 1090 265, 1080 330, 1030 370 C 960 425, 900 420, 840 470 C 790 512, 760 580, 690 600 C 600 626, 520 600, 470 640 C 430 672, 380 690, 320 660 C 250 626, 220 560, 180 510 C 130 448, 90 400, 100 320 C 106 268, 90 225, 120 200 Z"/>
+    <path d="M880 560 C 930 545, 990 560, 1020 600 C 1045 635, 1030 680, 990 695 C 940 712, 890 690, 870 650 C 855 618, 855 570, 880 560 Z" opacity="0.7"/>
+  </g>
+  <!-- 河流：青铜锈细线 -->
+  <g fill="none" stroke="#3E7C6A" stroke-width="1" opacity="0.7">
+    <path d="M300 240 C 360 280, 420 300, 470 350 C 520 400, 560 430, 600 470"/>
+    <path d="M700 260 C 680 320, 700 380, 660 440 C 640 470, 620 500, 610 540"/>
+    <path d="M380 480 C 420 500, 460 530, 480 570"/>
+  </g>
+  <!-- 经纬网：古地图绘风 -->
+  <g stroke="#A67C3D" stroke-width="0.5" opacity="0.18" fill="none">
+    <path d="M0 200 H1200 M0 400 H1200 M0 600 H1200"/>
+    <path d="M300 0 V800 M600 0 V800 M900 0 V800"/>
+    <ellipse cx="600" cy="400" rx="560" ry="360"/>
+  </g>
+  <!-- 罗盘玫瑰 -->
+  <g transform="translate(1080,110)" stroke="#A67C3D" fill="none" opacity="0.8">
+    <circle r="34" stroke-width="1"/>
+    <circle r="24" stroke-width="0.6" opacity="0.6"/>
+    <path d="M0 -34 L6 0 L0 34 L-6 0 Z" fill="#A67C3D" stroke="none" opacity="0.8"/>
+    <path d="M-34 0 L0 6 L34 0 L0 -6 Z" fill="#A67C3D" stroke="none" opacity="0.5"/>
+    <text y="-44" text-anchor="middle" font-family="serif" font-size="13" fill="#E9D492" stroke="none">北</text>
+  </g>
+  <!-- 古城标记：星芒金 -->
+  <g fill="#E9D492">
+    <circle cx="470" cy="350" r="3"/><circle cx="660" cy="440" r="3"/>
+    <circle cx="600" cy="470" r="2.4" opacity="0.8"/><circle cx="330" cy="300" r="2.4" opacity="0.8"/>
+    <circle cx="860" cy="300" r="2.4" opacity="0.8"/>
+  </g>
+  <g font-family="'Noto Serif SC',serif" font-size="14" fill="#E9D492" opacity="0.8" letter-spacing="3">
+    <text x="482" y="344">长安</text>
+    <text x="672" y="434">洛阳</text>
+    <text x="612" y="492">建业</text>
+    <text x="342" y="294">敦煌</text>
+    <text x="872" y="294">登州</text>
+  </g>
+</svg>
